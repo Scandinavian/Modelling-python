@@ -1,0 +1,126 @@
+# 1. Числовые (int)
+x = 5
+print x
+print type(x)
+a = 4 + 5
+b = 4 * 5
+c = 5 / 4
+
+print a, b, c
+
+# 2. Нецелые, с плавающей точкой (float)
+y = 5.7
+print type(y)
+a = 5
+b = 4
+print float(a) / float(b)
+print 5.0 / 4
+print 5 / 4.0
+
+# 3. Логические (bool)
+a = True
+b = False
+
+print a
+print type(a)
+
+print b
+print type(b)
+
+#4. Пустое значение (None)
+z = None
+print z
+print type(z)
+
+#5. Строковые (str)
+x = "abc"
+print x
+print type(x)
+
+a = 'Ivan'
+b = "Ivanov"
+s = a + " " + b
+print s
+
+print a.upper()
+print a.lower()
+
+print len(a)
+
+print a
+print a[0]
+print a[1]
+print a[0:3]
+
+print a[0:4:2]
+
+#6. Unicode
+x = u"abc"
+print x
+print type(x)
+
+x = u'Элеонора Михайловна'
+print x, type(x)
+y = x.encode('utf-8')
+print y, type(y)
+z = y.decode('utf-8')
+print z, type(z)
+
+splitted_line = "Ivanov Ivan Ivanovich".split(' ')
+print splitted_line
+
+#7. Список (list)
+saled_goods_count = [33450, 34010, 33990, 33200]
+print saled_goods_count
+print type(saled_goods_count)
+
+features = ['Ivan Ivanovich', 'Medium', 500000, 12, True]
+print features
+
+#8. Кортеж (tuple)
+features_tuple = ('Ivan Ivanovich', 'Medium', 500000, 12, True)
+print type(features_tuple)
+
+features_tuple[2:5]
+
+#9. Множество (set)
+names = {'Ivan', 'Petr', 'Konstantin'}
+print type(names)
+
+print 'Ivan' in names
+
+print 'Mikhail' in names
+
+names.add('Mikhail')
+print names
+
+names.remove('Mikhail')
+print names
+
+names.add(('Vladimir', 'Vladimirovich'))
+print names
+
+a = range(10000)
+b = range(10000)
+b = set(b)
+
+print a[:5]
+print a[-5:]
+
+%%time
+print 9999 in a
+
+%%time
+print 9999 in b
+
+#10. Словарь (dict)
+words_frequencies = dict()
+words_frequencies['I'] = 1
+words_frequencies['am'] = 1
+words_frequencies['I'] += 1
+
+print words_frequencies
+
+yet_another_dict = {'abc': 3.4, 5: 7.8, u'123': None}
+print yet_another_dict
+
