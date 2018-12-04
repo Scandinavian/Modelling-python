@@ -1,0 +1,33 @@
+?open
+
+#открытие файла для чтения с помощью встроенной функции open
+file_obj = open('example_utf8.txt', 'r')
+
+type(file_obj)
+
+print file_obj.read()
+
+file_obj = open('example_utf8.txt')
+print file_obj.readline()
+
+print file_obj.readline()
+
+file_obj = open('example_utf8.txt')
+
+for line in file_obj:
+    print line.strip()
+    
+file_obj = open('example_utf8.txt')
+data_list = list(file_obj)
+
+for line in data_list: print line.strip()
+
+file_obj = open('example_utf8.txt')
+data_list = file_obj.readlines()
+
+for line in data_list: print line.strip()
+
+#попытка чтения закрытого файла приводит к ошибке!
+file_obj = open('example_utf8.txt')
+file_obj.close()
+file_obj.read()
