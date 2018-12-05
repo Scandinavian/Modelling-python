@@ -40,3 +40,19 @@ frame.drop([5,6], axis=0, inplace=True)
 
 frame
 
+#удаление столбца DataFrame (inplace)
+frame.drop('IsStudent', axis=1, inplace=True)
+
+frame
+
+#запись DataFrame в файл
+frame.to_csv('updated_dataset.csv', sep=',', header=True, index=False)
+
+#добавление значений в файл
+frame['IsStudent'] = [False, False, True, True, True]
+
+
+#вывод информации о данных
+frame.info()
+
+frame
